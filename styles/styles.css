@@ -1,6 +1,6 @@
 body {
 
-
+    margin: 0px;
 
 }
 
@@ -15,7 +15,28 @@ nav.navbar {
 
 a.navbar-brand {
 
-    font-size: 25;
+    font-size: 24px;
 
+    display: inline;
+
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 13px;
+
+    padding: 13px;
+
+}
+
+ul.nav-list {
+
+    display: inline;
+
+}
+
+ul.nav-list li {
+
+    display: inline;
+
+    color: white;
 
 }
