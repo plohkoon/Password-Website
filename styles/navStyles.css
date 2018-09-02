@@ -1,0 +1,131 @@
+nav.navbar {
+
+    background-color: #4C76A0;
+
+    padding: 18px;
+
+}
+
+a.navbar-brand {
+
+    font-size: 20px;
+
+    border: 20px;
+
+    display: inline;
+
+    color: #B4DFFF;
+
+    font-weight: bolder;
+
+    margin: 15px;
+
+}
+
+ul.nav-list {
+
+    display: inline;
+
+    border: 0;
+
+}
+
+li.nav-item {
+
+    display: inline;
+
+    /*padding-top: 22px;
+    padding-bottom: 16px;
+    padding-left: 18px;
+    padding-right: 18px;*/
+
+    padding: 5px;
+
+    background-color: #1D496C;
+
+
+}
+
+li.nav-item:hover {
+
+    background-color: #060A13;
+
+}
+
+li.nav-item.active {
+
+    background-color: #83B3E1;
+
+}
+
+li.nav-item a {
+
+    color: #f4e9e3;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    padding: 20px;
+
+}
+
+li.nav-item:hover a {
+
+    color: #87A6C3;
+
+    font-weight: 600;
+
+}
+
+li.nav-item.active a {
+
+    color: #070D19;
+
+    font-weight: 600;
+
+}
+
+div.nav-box {
+
+    height: 50px;
+
+    display: inline;
+
+}
+
+form.login {
+
+    display: inline;
+
+    position: absolute;
+    right: 0;
+
+}
+
+input.login {
+
+    display: inline;
+
+    border: 0px;
+    padding: 4px;
+
+}
+
+button.submit {
+
+    background-color:  #060A13;
+    color: #87A6C3;
+
+    font-weight: 600;
+
+    border: 0px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border-radius: 5px;
+
+}
