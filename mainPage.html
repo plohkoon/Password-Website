@@ -10,17 +10,32 @@
         <link rel = "stylesheet" type = "text/css" href = "styles/styles.css">
         <link rel = "stylesheet" type = "text/css" href = "styles/navStyles.css">
 
+        <script src = "scripts/navScripts.js"></script>
+
+
     </head>
 
     <body>
 
         <nav class = "navbar">
 
+            <div class = topbar>
+
+                <button class = "toggle" onclick = "hideNav()">
+
+                    <div class = "toggle-line"></div>
+                    <div class = "toggle-line"></div>
+                    <div class = "toggle-line"></div>
+
+                </button>
+
             <a class = "navbar-brand">Passwords</a>
+
+        </div>
 
             <div class = "nav-box">
 
-                <ul class = "nav-list">
+                <ul class = "nav-list" id = "nav-list">
 
                     <li class = "nav-item active">
 
@@ -54,11 +69,11 @@
 
                 </ul>
 
-                <form class = "login">
+                <form class = "login" id = "login">
 
                     <input class = "login" placeholder = "Email" type = "email">
                     <input class = "login" placeholder = "Password" type = "password">
-                    <button class = "submit" type - "submit">Login</button>
+                    <button class = "submit" type = "submit">Login</button>
 
                 </form>
 
