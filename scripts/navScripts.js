@@ -1,19 +1,19 @@
-
 function hideNav() {
 
-    if(document.getElementById('nav-list').style.marginLeft !== "-70px") {
+    if(document.getElementById('navbar').style.marginLeft !== "-70px") {
 
-        document.getElementById('nav-list').style.marginLeft = '-70px';
-
-        document.getElementById('login').style.display = 'block';
+        document.getElementById('navbar').style.marginLeft = '-70px';
+        
+        document.getElementById('login').classList.add("active");
 
     }
     else {
 
-        document.getElementById('nav-list').style.marginLeft = '-175px';
-
-        document.getElementById('login').style.display = 'none';
+        document.getElementById('navbar').style.marginLeft = '-160px';
+        
+        document.getElementById('login').classList.remove('active');
 
     }
 
 }
+

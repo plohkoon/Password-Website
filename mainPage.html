@@ -16,23 +16,24 @@
     </head>
 
     <body>
+        
+        <div class = topbar>
 
-        <nav class = "navbar">
+            <button class = "toggle" onclick = "hideNav()">
 
-            <div class = topbar>
+                <div class = "toggle-line"></div>
+                <div class = "toggle-line"></div>
+                <div class = "toggle-line"></div>
 
-                <button class = "toggle" onclick = "hideNav()">
+            </button>
 
-                    <div class = "toggle-line"></div>
-                    <div class = "toggle-line"></div>
-                    <div class = "toggle-line"></div>
+            <a class = "navbar-brand">P4$$WORD5</a>
 
-                </button>
+        </div>
 
-                <a class = "navbar-brand">P4$$WORD5</a>
+        <nav class = "nav-bar" id = "navbar">
 
-            </div>
-
+            
             <div class = "nav-box">
 
                 <ul class = "nav-list" id = "nav-list">
@@ -73,6 +74,13 @@
 
                     <input class = "login" placeholder = "Email" type = "email">
                     <input class = "login" placeholder = "Password" type = "password">
+                    
+                    <div class = "create-account">
+                            
+                        <a href = "newAccount.html">Create Account</a>
+                        
+                    </div>
+                    
                     <button class = "submit" type = "submit">Login</button>
 
                 </form>
