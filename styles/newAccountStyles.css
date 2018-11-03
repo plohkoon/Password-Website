@@ -1,17 +1,57 @@
-input {
+.accountCreation {
     
+    padding: 10px;
+    padding-top: 0px;
     
-    
-}
-
-h2 {
-    
-    
+    display: block;
     
 }
 
-button {
-    
-    
+.accountCreation input {
+
+    border: 0px;
+    padding: 4px;
+
+    margin: 5px;
+
+    border-radius: 5px;
     
 }
+
+.accountCreation select {
+
+    border: 0px;
+    padding: 4px;
+
+    margin: 5px;
+
+    border-radius: 5px;
+    
+}
+
+.accountCreation h2 {
+    
+    text-decoration: underline;
+    
+}
+
+.accountCreation button.accountSubmit {
+    
+    background-color:  #060A13;
+    color: #87A6C3;
+
+    font-weight: 600;
+
+    border: 0px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border-radius: 5px;
+    
+    margin: 5px;
+    
+}
+

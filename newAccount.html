@@ -100,57 +100,65 @@
 
             <h1>Create Account</h1>
             
-            <form>
+            <div class = "accountCreation">
                 
-                <h2>Personal and Account Information</h2>
-                
-                <select name = "prefix">
+            
+                <form method = "post" class = "accountCreation">
                     
-                    <option value = "Mr.">Mr.</option>
-                    <option value = "Mrs.">Mrs.</option>
-                    <option value = "Ms.">Ms.</option>
+                    <h2>Personal and Account Information</h2>
                     
-                </select>
-                
-                <input type = "name" name = "fName" placeholder = "First Name">
-                <input type = "name" name = "lName" placeholder = "Last Name">
-                
-                <br>
-                
-                <input type = "date" name = "bDay" placeholder = "Birthday">
-                <input type = "tel" name = "phone" placeholder = "Phone Number">
-                
-                <br>
-                
-                <input type = "email" name = "email" placeholder = "Email">
-                <input type = "password" name = "password" placeholder = "Password">
-                
-                <br>
-                
-                <h2>Billing Address</h2>
-                
-                <input type = "text" name = "address" placeholder = "Address">
-                <input type = "text" name = "postal" placeholder = "Postal Code">
-                
-                <br>
-                
-                <input type = "text" name = "country" placeholder = "Country">
-                <input type = "text" name = "province" placeholder = "Province">
-                <input type = "text" name = "city" placeholder = "City">
-                
-                <br>
-                
-                <h2>Billing Information</h2>
-                
-                <input type = "text" name = "card" placeholder = "Credit Card Number" pattern = "[0-9]{16}">
-                <input type = "text" name = "cvn" placeholder = "CVN" pattern = "[0-9]{3,4}">
-                <input type = "month" name = "expiry">
-                
-                <br>
-                
-                <button type = "submit">Create Account</button>
-    
+                    <select name = "prefix">
+                        
+                        <option value = "Mr.">Mr.</option>
+                        <option value = "Mrs.">Mrs.</option>
+                        <option value = "Ms.">Ms.</option>
+                        
+                    </select>
+                    
+                    <input type = "name" name = "fName" placeholder = "First Name" required>
+                    <input type = "name" name = "lName" placeholder = "Last Name" required>
+                    
+                    <br>
+                    
+                    <input type = "date" name = "bDay" placeholder = "Birthday" required>
+                    <input type = "tel" name = "phone" placeholder = "Phone Number" pattern = "[0-9]{10}" required>
+                    
+                    <br>
+                    
+                    <input type = "email" name = "email" placeholder = "Email" required>
+                    <input type = "password" name = "password" placeholder = "Password" required>
+                    
+                    <br>
+                    
+                    <h2>Billing Address</h2>
+                    
+                    <input type = "text" name = "address" placeholder = "Address" required>
+                    <input type = "text" name = "postal" placeholder = "Postal Code" required>
+                    
+                    <br>
+                    
+                    <input type = "text" name = "country" placeholder = "Country" required>
+                    <input type = "text" name = "province" placeholder = "Province" required>
+                    <input type = "text" name = "city" placeholder = "City" required>
+                    
+                    <br>
+                    
+                    <h2>Billing Information</h2>
+                    
+                    <input type = "text" name = "card" placeholder = "Credit Card Number" pattern = "[0-9]{16}" required>
+                    <input type = "text" name = "cvn" placeholder = "CVN" pattern = "[0-9]{3,4}" required>
+                    <input type = "month" name = "expiry" required>
+                    
+                    <br>
+                    <div class = "accountSubmit">
+                        
+                        <button type = "submit" class = "accountSubmit">Create Account</button>
+                        
+                    </div>
+        
                 </form>
+                
+            </div>
             
         </div>
         

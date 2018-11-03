@@ -1,17 +1,13 @@
 function hideNav() {
 
-    if(document.getElementById('navbar').style.marginLeft !== "-70px") {
+    if(document.getElementById('navbar').classList.contains("active")) {
 
-        document.getElementById('navbar').style.marginLeft = '-70px';
-        
-        document.getElementById('login').classList.add("active");
+        document.getElementById('navbar').classList.remove("active");
 
     }
     else {
 
-        document.getElementById('navbar').style.marginLeft = '-160px';
-        
-        document.getElementById('login').classList.remove('active');
+        document.getElementById('navbar').classList.add("active");
 
     }
 
