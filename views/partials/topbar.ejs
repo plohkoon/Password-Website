@@ -1,0 +1,30 @@
+<div class = "topBar">
+
+    <div class = "pageTitle">
+        <h1 class = "pageTitle">Passwords</h1>
+    </div>
+
+    <div class = "navList">
+        <ul class = "navList">
+            <li class = "navItem">
+                <a href="/home">Home</a>
+            </li>
+            <li class = "navItem">
+                <a href="/newaccount">Create Account</a>
+            </li>
+        </ul>
+        <% if(!isAuthenticated) {%>
+            <form class="" action="/login/" method="post">
+
+                <input type="email" name="email"
+
+            </form>
+        <% }else { %>
+
+            <p>Welcome <%- user %></p>
+
+        <% } %>
+
+    </div>
+
+</div>

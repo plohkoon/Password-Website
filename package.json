@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "password-website",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -10,13 +10,21 @@
     "type": "git",
     "url": "git+https://github.com/plohkoon/Website.git"
   },
-  "author": "",
+  "author": "Gregory",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/plohkoon/Website/issues"
   },
   "homepage": "https://github.com/plohkoon/Website#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "method-override": "^3.0.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
   }
 }

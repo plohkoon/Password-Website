@@ -1,77 +1,43 @@
+//initiating dependencies
 const   url = require('url'),
         http = require('http'),
         path = require('path'),
-        bodyParser = require('body-parser');
+        bodyParser = require('body-parser'),
+        ejs = require('ejs'),
+        methodOverride = require('method-override'),
+        passport = require('passport');
 
+//initiating routes
+const   home = require('./routes/home'),
+        newaccount = require('./routes/newaccount'),
+        login = require('./routes/login');
+
+//initiating the server
 const   express = require('express'),
-        app = express(),
+        serv = express(),
         port = 8080;
 
-app.use(bodyParser.urlencoded(({extended:false})));
-app.use(bodyParser.json())
+//add bodyParser for POST requests
+serv.use(bodyParser.urlencoded(({extended:false})));
+serv.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, 'public')));
+serv.use(methodOverride('_method'));
 
-app.get('/', function(req, res) {
+serv.use(express.static("public"));
 
-    res.redirect('/mainPage');
+//changing the view engine to render EJS
+serv.set('view engine', 'ejs');
 
-})
+serv.all("/", (req, res) => {
 
-app.get('/mainPage', function(req, res) {
+    res.redirect("/home");
 
-    res.sendFile(path.join(__dirname + '/mainPage.html'));
+});
 
-})
+serv.use("/home", home);
 
-app.get('/newAccount', function(req, res) {
+serv.use("/newaccount", newaccount);
 
-    res.sendFile(path.join(__dirname + '/newAccount.html'));
+serv.use("/login", login);
 
-})
-
-app.get('/account', function(req, res) {
-
-    res.sendFile(path.join(__dirname + '/account.html'));
-
-})
-
-app.get('/buy', function(req, res) {
-
-    res.sendFile(path.join(__dirname + '/buy.html'));
-
-})
-
-app.get('/help', function(req, res) {
-
-    res.sendFile(path.join(__dirname + '/help.html'));
-
-})
-
-app.get('/passwords', function(req, res) {
-
-    res.sendFile(path.join(__dirname + '/passwords.html'));
-
-})
-
-app.post('/newAccount', function(req, res) {
-
-    console.log(req.body.prefix);
-    console.log(req.body.fName);
-    console.log(req.body.lName);
-    console.log(req.body.bDay);
-    console.log(req.body.phone);
-    console.log(req.body.email);
-    console.log(req.body.password);
-    console.log(req.body.address);
-    console.log(req.body.postal);
-    console.log(req.body.country);
-    console.log(req.body.province);
-    console.log(req.body.city);
-    console.log(req.body.card);
-    console.log(req.body.cvn);
-    console.log(req.body.expiry);
-
-})
-
-app.listen(port);
+serv.listen(port);

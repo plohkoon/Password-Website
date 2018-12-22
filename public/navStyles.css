@@ -1,0 +1,75 @@
+.topBar {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px;
+    margin: 0px;
+
+    background-color: #003300;
+
+    font-size: 13px;
+
+}
+
+.pageTitle {
+
+    display: inline-flex;
+
+    width: 200px;
+
+    margin: 0px;
+    padding: 5px;
+
+    color: white;
+
+}
+
+.navList {
+
+    display: inline-flex;
+
+    width: 80%;
+    height: 100%;
+
+    color: yellow;
+
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.navItem {
+
+    display: inline;
+
+    margin: 0px;
+
+    height: 100%;
+
+
+
+}
+
+.navItem a {
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    font-size: 20px;
+
+}
+
+.navItem a:hover {
+
+    background-color: #00ff00;
+    color: black;
+
+}
