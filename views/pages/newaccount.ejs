@@ -2,11 +2,18 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <%- include('../partials/htmldeps.ejs'); %>
         <title></title>
     </head>
     <body>
 
         <%- include('../partials/topbar.ejs'); %>
+
+        <form class="" action="/account/?_method=post" method="post">
+            <input type="text" name="username" value="" placeholder="username">
+            <input type="password" name="password" value="" placeholder="password">
+            <button type="submit" name="button">Create Account</button>
+        </form>
 
     </body>
 </html>

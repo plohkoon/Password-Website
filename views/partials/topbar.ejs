@@ -10,13 +10,15 @@
                 <a href="/home">Home</a>
             </li>
             <li class = "navItem">
-                <a href="/newaccount">Create Account</a>
+                <a href="/createaccount">Create Account</a>
             </li>
         </ul>
         <% if(!isAuthenticated) {%>
-            <form class="" action="/login/" method="post">
+            <form class="" action="/account/?_method=get" method="post">
 
-                <input type="email" name="email"
+                <input type="text" name="username">
+                <input type="password" name="password">
+                <button action = "submit">login</button>
 
             </form>
         <% }else { %>
