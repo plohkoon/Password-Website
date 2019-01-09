@@ -16,17 +16,19 @@ router.get("/home", (req, res) => {
     //console.log(req.session.passport.user !== null);
     console.log(req.session);
 
-    let authenticated = false,
-        user = null;
+    let pageData = {
+        isAuthenticated: false,
+        user: null
+    }
 
     if(req.session.passport && req.session.passport.user) {
 
-        authenticated = true;
-        user = req.session.passport.user;
+        pageData.isAuthenticated = true;
+        pageData.useruser = req.session.passport.user;
 
     }
 
-    res.render('pages/home.ejs', {isAuthenticated: authenticated, user: user});
+    res.render('pages/home.ejs', pageData);
 
 })
 
@@ -41,6 +43,64 @@ router.get("/createaccount", (req, res) => {
     res.render("pages/newaccount.ejs", {isAuthenticated: false, user: null});
 
 });
+
+router.get("/shop", (req, res) => {
+
+    if(!req.session.passport) {
+
+        res.redirect("/createaccount")
+
+    }
+
+    let pageData = {
+        isAuthenticated: true,
+        user: req.session.passport.user
+    };
+
+    res.render('pages/shop.ejs', pageData);
+
+});
+
+router.get("/passwords", (req, res) => {
+
+    if(!req.session.passport) {
+
+        res.redirect("/createaccount")
+
+    }
+
+    let pageData = {
+        isAuthenticated: true,
+        user: req.session.passport.user
+    };
+
+    res.render('pages/passwords.ejs', pageData);
+
+});
+
+router.get("/help", (req, res) => {
+
+    let pageData = {
+        isAuthenticated: false,
+        user: null
+    }
+
+    if(req.session.passport && req.session.passport.user) {
+
+        pageData.isAuthenticated = true;
+        pageData.useruser = req.session.passport.user;
+
+    }
+
+    res.render('pages/help.ejs', pageData);
+
+});
+
+router.get("/", (req, res) => {
+
+    res.redirect("/home");
+
+})
 
 
 module.exports = router;

@@ -1,0 +1,36 @@
+body {
+
+    margin: 0px;
+
+}
+
+.mainContainer {
+
+    display: flex;
+
+    justify-content: center;
+    margin: 0px;
+
+    width: 100%
+
+}
+
+.content{
+
+    width: 80%;
+
+}
+
+.content h1 {
+
+    background-color: black;
+    color: white;
+
+}
+
+.content p {
+
+    background-color: grey;
+    color: black;
+
+}
