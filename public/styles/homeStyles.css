@@ -1,0 +1,22 @@
+.splash {
+
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0);
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.splash h1 {
+
+    color: white;
+    width: 100%;
+
+    text-align: center;
+
+}
