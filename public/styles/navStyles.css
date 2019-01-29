@@ -1,3 +1,10 @@
+.navBar {
+
+    width: 100%;
+    position: fixed;
+
+}
+
 .topBar {
 
     display: flex;
@@ -12,13 +19,22 @@
 
     font-size: 13px;
 
+
+
+    transition-property: background-color;
+    transition-duration: 300ms;
+
+}
+
+.topBar.top {
+
+    background-color: rgba(0,0,0,0);
+
 }
 
 .pageTitle {
 
     display: inline-flex;
-
-    width: 200px;
 
     margin: 0px;
     padding: 5px;
@@ -30,8 +46,8 @@
 .navList {
 
     display: inline-flex;
+    align-items: center;
 
-    width: 80%;
     height: 100%;
 
     color: yellow;
@@ -78,6 +94,8 @@
 
     height: 50px;
 
+    display: inline;
+
     transform: rotate(0deg);
 
     transition-property: transform;
@@ -94,8 +112,8 @@
 .loginbox {
 
     width: 20%;
-    float: right;
-    position: sticky;
+    position: absolute;
+    right: 0;
 
     background-color: #003300;
 

@@ -2,6 +2,10 @@ body {
 
     margin: 0px;
 
+    background-image: url("/img/everest.jpg");
+    background-attachment: fixed;
+    background-position: center;
+
 }
 
 .mainContainer {
@@ -10,14 +14,19 @@ body {
 
     justify-content: center;
     margin: 0px;
+    padding: 0px;
 
-    width: 100%
+    width: 100%;
+
+    flex-wrap: wrap;
 
 }
 
 .content{
 
     width: 80%;
+    margin: 0px;
+    padding: 0px;
 
 }
 
@@ -26,11 +35,17 @@ body {
     background-color: black;
     color: white;
 
+    margin: 0px;
+    padding: 10px;
+
 }
 
 .content p {
 
     background-color: grey;
     color: black;
+
+    margin: 0px;
+    padding: 10px;
 
 }
