@@ -5,7 +5,7 @@ const   url = require('url'),
         bodyParser = require('body-parser'),
         ejs = require('ejs');
 //intiating express and routers
-const   express =require('express'),
+const   express = require('express'),
         router = express.Router();
 
 router.use(express.static("public"));
@@ -24,7 +24,7 @@ router.get("/home", (req, res) => {
     if(req.session.passport && req.session.passport.user) {
 
         pageData.isAuthenticated = true;
-        pageData.useruser = req.session.passport.user;
+        pageData.user = req.session.passport.user;
 
     }
 
