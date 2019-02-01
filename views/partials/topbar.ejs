@@ -2,34 +2,78 @@
     <div class = "topBar top" id = "topBar">
 
         <div class = "pageTitle">
-            <h1 class = "pageTitle">Everest Passwords</h1>
+            <h1 class = "pageTitle">Everest</h1>
+            <span class = "titleExtended"><h1 class = "pageTitle"> Passwords</h1></span>
         </div>
 
-        <div class = "navList">
-            <ul class = "navList">
-                <li class = "navItem">
-                    <a href="/home">Home</a>
-                </li>
-                <li class = "navItem">
-                    <a href="/shop">Shop</a>
-                </li>
-                <li class = "navItem">
-                    <a href="/passwords">Passwords</a>
-                </li>
-                <li class = "navItem">
-                    <a href="/help">Help</a>
-                </li>
-            </ul>
+        <span class = "navSpan">
+            <nav class = "navList wideNav">
+                <ul class = "navList">
+                    <li class = "navItem">
+                        <a href="/home">Home</a>
+                    </li>
+                    <li class = "navItem">
+                        <a href="/shop">Shop</a>
+                    </li>
+                    <li class = "navItem">
+                        <a href="/passwords">Passwords</a>
+                    </li>
+                    <li class = "navItem">
+                        <a href="/help">Help</a>
+                    </li>
+                </ul>
 
-            <img src="/img/arrow.png" class = "arrow active" id = "arrow">
+            </nav>
+        </span>
+        <span class = "loginSpan">
 
-        </div>
+            <form class="loginform" action="/account/?_method=get" method="post">
 
+                <input type="text" name="username" placeholder="email">
+                <input type="password" name="password" placeholder="password">
+                <button action = "submit">login</button>
 
+            </form>
+
+        </span>
+
+        <button type="button" class="hamburger hamburger--slider" id="menuToggle">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
 
     </div>
 
-    <div class = "loginbox active" id = "loginbox">
+    <nav class = "narrowNav" id = "narrowNav">
+
+        <ul class = " narrowNavList">
+            <li class = "navItem">
+                <a href="/home">Home</a>
+            </li>
+            <li class = "navItem">
+                <a href="/shop">Shop</a>
+            </li>
+            <li class = "navItem">
+                <a href="/passwords">Passwords</a>
+            </li>
+            <li class = "navItem">
+                <a href="/help">Help</a>
+            </li>
+        </ul>
+
+        <form class="loginform" action="/account/?_method=get" method="post">
+            <div>
+            <input type="text" name="username" placeholder="email">
+            <input type="password" name="password" placeholder="password">
+            </div>
+            <button action = "submit">login</button>
+
+        </form>
+
+    </nav>
+
+    <!--div class = "loginbox" id = "loginbox">
         <% if(!isAuthenticated) {%>
             <form class="loginform" action="/account/?_method=get" method="post">
 
@@ -45,5 +89,5 @@
 
         <% } %>
 
-    </div>
+    </div-->
 </div>
